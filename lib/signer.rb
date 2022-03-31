@@ -209,6 +209,7 @@ class Signer
       reference_node['URI'] = "##{security_token_id}"
       security_token_reference_node.add_child(reference_node)
       signed_info_node.add_next_sibling(key_info_node)
+      set_namespace_for_node(node, WSSE_NAMESPACE, 'wsse')
     end
     node
   end
